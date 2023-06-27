@@ -12,7 +12,7 @@ def load_camera_json(json_f):
 
 def load_cameras(cam_dir):
 
-    cam_fs = glob.glob(osp.join(cam_dir, "*.json"))
+    cam_fs = sorted(glob.glob(osp.join(cam_dir, "*.json")))
     
     rots, trans = [], []
 
